@@ -1,0 +1,38 @@
+.taskNew {
+    width: 100%;
+    background: var(--gray-500);
+    border: 1px solid var(--gray-400);
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px; 
+}
+
+.taskNew p { 
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--gray-100);
+    margin-right: auto;
+}
+
+.check {
+    min-width: 16px;
+    height: 16px;
+    background: none;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+}
+
+.iconButton {
+    border: none;
+}
+
+.iconButton img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-500)
+}
+
