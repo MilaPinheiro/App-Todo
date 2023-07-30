@@ -1,8 +1,8 @@
 import styles from './tasks.module.css'
 import { Task } from '../../components/Task'
+import clipboard from '../../assets/Clipboard.svg'
 
-
-export function Tasks({tasksProps, tasksPropsFuncao}) {
+export function Tasks({tasksProps, tasksPropsFuncao, concludedTaskNow}) {
 
     const tasksAmount = tasksProps.length
 
@@ -33,9 +33,20 @@ export function Tasks({tasksProps, tasksPropsFuncao}) {
                         return <Task key={item.id} 
                         taskIdProps={item.id}
                         taskNameProps={item.name}
+                        tasksPropsFuncao={tasksPropsFuncao}
+                        concludedTaskNow={concludedTaskNow}
                         taskConcludedProps={item.concluded}/>
-                    })
-                }  
+                    })}
+
+                    {tasksProps.length <= 0  && (
+                         <section className={styles.NoTasks}> 
+                             <img  src={clipboard} />
+                             <div>
+                                <p>Você ainda não tem tarefas cadastradas</p>
+                                <span>Crie tarefas e organize seus itens a fazer</span>
+                             </div>
+                         </section>
+                    )}  
             </ul>
         </section>
     )
