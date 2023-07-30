@@ -18,21 +18,24 @@
 }
 
 .iconButton {
-    border: none;
-    cursor: pointer;
+  border: none;
+  cursor: pointer;
 }
+
 
 .iconButton img{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--gray-500)
+    background: var(--gray-500);
+    
 }
+
 
 .checkbox{
     appearance: none;
-    width: 5px;
-    height: 5px;
+    width: 17px;
+    height: 17px;
     position: relative;
     text-align: center;
     cursor: pointer;
@@ -42,10 +45,12 @@
   }
 
   .checkbox::after {
-    content: url('../../assets//check.svg');
+    content: url('../../assets/check.svg');
     position: absolute;
     inset: -1px 1px;
     opacity: 0; 
+    padding: 4px;
+    
   }
   
   .checkbox:checked:after {
@@ -55,10 +60,20 @@
   .checkbox:checked {
     border-color: var(--purple-dark);
     background-color: var(--purple-dark);
+
   }
 
-.label {
-    display: none;
-  
-}
+  .label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+    
+
 

@@ -34,7 +34,12 @@ input {
 
 input::placeholder {
     color: var(--gray-300);
+    
 }
+
+input:focus {
+    border-color: var(--purple-dark);
+  }
 
 .buttonOne{
     border-radius: 8px;
@@ -53,6 +58,11 @@ input::placeholder {
     align-items: center;
 }
 
+.buttonOne:hover{
+    background: #4EA8DE;
+}
+
+
 .buttonOne img {
     margin: 0;
     width: 16px;
@@ -63,4 +73,13 @@ input::placeholder {
 span {
     margin-right: 7px;
   
+}
+
+
+@media (max-width: 760px) {
+	.form  {
+      width: 100%;
+      padding: 15px;
+	}
+
 }

@@ -1,8 +1,6 @@
 import { useState } from 'react'
-
 import todoLogo from '../../assets/todo-logo.svg' 
 import plus from '../../assets/plus.svg'
-
 import styles from './header.module.css'
 
 
@@ -11,7 +9,9 @@ export function Header({tasksProps, setTasksProps}) {
     const [taskName, setTaskName]= useState("")
 
     function changeInput(event) {
+        console.log(event.target.value)
         setTaskName(event.target.value)
+   
     }
 
     function addTasks() {
@@ -21,10 +21,12 @@ export function Header({tasksProps, setTasksProps}) {
             name: taskName,
             concluded: false
          }
-         //console.log(newTask)
+         console.log(newTask)
 
      setTasksProps([...tasksProps, newTask])
-     setTaskName(" ")
+        console.log([...tasksProps, newTask])
+     setTaskName('')
+        console.log(setTaskName)
     }
 
 

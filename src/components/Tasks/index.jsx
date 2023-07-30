@@ -5,12 +5,13 @@ import clipboard from '../../assets/Clipboard.svg'
 export function Tasks({tasksProps, tasksPropsFuncao, concludedTaskNow}) {
 
     const tasksAmount = tasksProps.length
+    console.log(`total criadas: ${tasksAmount}`)
 
     const concludedTasksAmount = tasksProps.filter((task) => {
         return task.concluded
     }).length
 
-    console.log(concludedTasksAmount)
+    console.log(`total concluidas: ${concludedTasksAmount}`)
     
 
     return (
@@ -36,7 +37,9 @@ export function Tasks({tasksProps, tasksPropsFuncao, concludedTaskNow}) {
                         tasksPropsFuncao={tasksPropsFuncao}
                         concludedTaskNow={concludedTaskNow}
                         taskConcludedProps={item.concluded}/>
+                        
                     })}
+          
 
                     {tasksProps.length <= 0  && (
                          <section className={styles.NoTasks}> 

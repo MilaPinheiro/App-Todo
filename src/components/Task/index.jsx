@@ -31,11 +31,11 @@ export function Task({taskIdProps, taskNameProps, taskConcludedProps, tasksProps
         </label>
         
 
-      <p style={{ textDecoration: taskConcludedProps ? 'line-through' : 'none' }}>{taskNameProps}</p>
+        <p style={{ textDecoration: taskConcludedProps ? 'line-through' : 'none' }}>{taskNameProps}</p>
 
-            <button className={styles.iconButton} onClick={() => tasksPropsFuncao(taskIdProps)}>
+        <button className={styles.iconButton} onClick={() => tasksPropsFuncao(taskIdProps)}>
                 <img  src={trash} />
-            </button>
+        </button>
     </li>
     )
 }

@@ -31,3 +31,9 @@ body {
 button {
     cursor: pointer;
 }
+
+@media (max-width: 760px) {
+    body {
+        background: var(--gray-700);
+    }
+}

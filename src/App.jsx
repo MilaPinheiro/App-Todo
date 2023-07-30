@@ -7,15 +7,19 @@ function App() {
 
   const [tasks, setTasks]= useState([])
 
+
   function deleteTask(taskIdProps) {
-      const updatedNewTask = tasks.filter((task) => task.id !== taskIdProps)
-      setTasks(updatedNewTask)
+    console.log(taskIdProps)
+    const updatedNewTask = tasks.filter((task) => task.id !== taskIdProps)
+    setTasks(updatedNewTask)
+    console.log( updatedNewTask)
  }
 
  function concludedTaskNow(taskIdProps) {
-  console.log(taskIdProps)
+  //console.log(taskIdProps)
   const updatedConcludedTasks = tasks.map((task) =>
   task.id === taskIdProps ? { ...task, concluded: !task.concluded } : task
+
 );
 
 setTasks(updatedConcludedTasks);
