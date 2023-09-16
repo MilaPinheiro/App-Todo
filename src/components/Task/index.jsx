@@ -12,6 +12,8 @@ export function Task({taskIdProps, taskNameProps, taskConcludedProps, tasksProps
     <li className={styles.taskNew}>
 
         <input
+
+        
           
             type="checkbox"
             id={`checkbox-${taskIdProps}`}
